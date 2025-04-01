@@ -1,0 +1,19 @@
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+    <div class="content-wrapper">
+        <h2>Résultats pour {{ get_query_var('s') }}</h2>
+
+        {% for post in posts %}
+            {% include ['partials/tease-' ~ post.type ~ '.twig', 'partials/tease.twig'] %}
+        {% endfor %}
+
+        {% include 'partials/pagination.twig' with {
+            pagination: posts.pagination({
+                show_all: false,
+                mid_size: 3,
+                end_size: 2
+            })
+        } %}
+    </div>
+{% endblock %}

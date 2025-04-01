@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html {{ site.language_attributes }}>
+    {% block head %}
+        {% include 'partials/head.twig' %}
+    {% endblock %}
+
+    <body class="{{ body_class }}">
+        <div class="container">
+            <header>
+                {% block header %}
+                <section>
+                    <h1>
+                        <a href="{{ site.url }}">{{ site.name }}</a>
+                    </h1>
+
+                    <form method="get" action="{{ site.url }}/">
+                        <input type="text" name="s" placeholder="Rechercher..." value="{{ get_query_var('s') }}">
+                        <button type="submit">Rechercher</button>
+                    </form>
+                </section>
+
+                <nav>
+                    {% include 'partials/menu.twig' with {
+                        items: menu.get_items
+                    } %}
+                </nav>
+                {% endblock %}
+            </header>
+
+            <main>
+                {% block content %}Aucun contenu...{% endblock %}
+            </main>
+
+            {% block footer %}
+                {% include 'partials/footer.twig' %}
+            {% endblock %}
+        </div>
+
+        {{ function('wp_footer') }}
+        {% do action('get_footer') %}
+    </body>
+</html>
+

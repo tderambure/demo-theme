@@ -1,0 +1,16 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "plugins": [
+    "stylelint-scss",
+    "@stylistic/stylelint-plugin"
+  ],
+  "rules": {
+    "@stylistic/indentation": 2,
+    "@stylistic/max-empty-lines": 1,
+    "no-empty-source": true,
+    "@stylistic/declaration-block-trailing-semicolon": "always",
+    "block-no-empty": true,
+    "@stylistic/declaration-colon-space-after": "always-single-line",
+    "@stylistic/declaration-colon-space-before": "never"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "demo-theme",
+  "version": "1.0.0",
+  "description": "Demo Theme",
+  "main": "webpack.config.js",
+  "author": "Thomas",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@stylistic/stylelint-plugin": "^3.1.2",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^6.11.0",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.86.0",
+    "sass-loader": "^16.0.5",
+    "stylelint": "^16.17.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-scss": "^6.11.1",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "scripts": {
+    "install-deps": "npm install",
+    "build": "webpack --mode production",
+    "lint:css": "stylelint './assets/styles/*.scss' --fix --formatter",
+    "lint:css:check": "stylelint './assets/styles/*.scss' --formatter verbose"
+  }
+}
