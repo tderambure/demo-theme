@@ -2,14 +2,8 @@
 
 {% block content %}
     <article class="post-type-{{ post.type }}" id="post-{{ post.id }}">
-        <img src="{{ post.thumbnail.src|resize(1200, 300) }}" />
-
         <section class="article-content">
             <h2>{{ post.title }}</h2>
-
-            {% if post.thumbnail.src %}
-                <img src="{{ post.thumbnail.src }}" />
-            {% endif %}
 
             <p class="blog-author">
                 <span>Par</span>

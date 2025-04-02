@@ -30,8 +30,7 @@ class DemoTheme extends Site
 
     public function add_to_context(array $context): array
     {
-        $context['stuff'] = 'I am a value set in your functions.php file';
-        $context['notes'] = 'These values are available everytime you call Timber::context();';
+        $context['test'] = '✅';
         $context['menu'] = Timber::get_menu('primary_navigation');
         $context['site'] = $this;
 
